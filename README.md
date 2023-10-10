@@ -1,7 +1,7 @@
 # AutoDepthNet Project
 
 ## Team Members
-- Spencer Beer, beersc@colostate, 832-925-472
+- Spencer Beer, beersc@colostate.edu, 832-925-472
 - Kyle Nilsson, kylenils@colostate.edu, 832-230-750
 
 ## Problem Statement
