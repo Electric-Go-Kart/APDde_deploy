@@ -82,3 +82,10 @@ To evaluate the results, the following methods will be employed:
 - **Qualitative Evaluation**: Depth maps will be used to visualize input images alongside a ground truth map for direct comparison. If feasible, predicted depth maps will be augmented on the dashboard of the Go-Kart to visualize the relationship.
 
 - **Quantitative Evaluation**: Various depth estimation metrics, such as Mean Absolute Error and Root Mean Squared Error, will be used to evaluate the model's performance. The accuracies of the model and its real-time inference will also be measured to ensure its suitability as a safety enhancement.
+
+---
+
+## Training and Acknowledgements
+
+Please visit our training and evaluation page [here](https://github.com/Electric-Go-Kart/AudoDepthNet_train)
+
