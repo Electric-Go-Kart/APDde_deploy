@@ -28,6 +28,9 @@ Relevant resources and implementations related to the project include:
 2. **Depth Estimation using Depth Camera D435i**
    - [GitHub Repository](https://github.com/jithin8mathew/Depth-estimation-using-Depth-Camera-D435i-for-YOLOv5-detected-objects)
    - This repository is a useful resource for learning how to manipulate the model for depth estimation.
+  
+https://docs.ultralytics.com/modes/train/#key-features-of-train-mode 
+https://github.com/itberrios/stereo_vision_starter/
 
 ---
 
