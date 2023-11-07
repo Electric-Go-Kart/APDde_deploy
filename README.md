@@ -30,6 +30,7 @@ Relevant resources and implementations related to the project include:
    - This repository is a useful resource for learning how to manipulate the model for depth estimation.
   
 https://docs.ultralytics.com/modes/train/#key-features-of-train-mode 
+
 https://github.com/itberrios/stereo_vision_starter/
 
 ---
