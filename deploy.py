@@ -4,34 +4,29 @@
 # This file is the main file for the deployment of the APDde project
 # It is run on the Raspberry Pi 4
 ######################################################################
+# #!/bin/sh
 
-# 1. Start TCP stream with this command: libcamera-vid -n -t 0 --width 1280 --height 960 --framerate 1 --inline --listen -o tcp://127.0.0.1:8888
-# 2. Run this file with the command: python3 deploy.py
+# # Setup APD_deploy folder
+# git clone https://github.com/ultralytics/yolov5
+# cd yolov5
+# git checkout 79bca2bf64da04e7e1e74a132eb54171f41638cc
+# cd ..
+# mv detect.py ./yolov5/
+# mv 528Project/ ./yolov5/
+# mv run_it.sh ./yolov5/
+# cd yolov5
+# mkdir runs
 
+# # Setup Coral dependencies
+# echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+# curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+# sudo apt update
+# sudo apt install libedgetpu1-std -y
+# sudo apt install python3-pycoral -y
+# pip install -r requirements.txt
+# pip install numpy --upgrade
+# # Import statements
 import os
-from ultralytics import YOLO
-import cv2
 
-def start_tcp_stream():
-    os.system("libcamera-vid -n -t 0 --width 1280 --height 960 --framerate 1 --inline --listen -o tcp://127.0.0.1:8888")
-
-def stop_tcp_stream():
-    os.system("killall libcamera-vid")
-
-def main():
-    # Run the TCP stream
-    model = YOLO(f"models/{model}.pt")
-    start_tcp_stream()
-    # Run the YOLO model
-    results = model('tcp://127.0.0.1:8888', stream=True)
-    # if 'q' is pressed, stop the TCP stream
-    while True:
-        for result in results:
-            boxes = result.boxes
-            probs = result.probs
-        if cv2.waitKey(1) == ord('q'):
-            break
-    stop_tcp_stream()
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    
